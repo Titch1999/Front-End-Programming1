@@ -1,0 +1,204 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2b2b6f, #4169e1); /* Dark blue to royal blue gradient */
+  transition: background 0.5s ease; /* Smooth transition for background */
+  display: flex;
+  justify-content: center;
+  padding-top: 40px; /* Slightly reduced padding for better balance */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+  height: 100vh; /* Full viewport height for proper centering */
+  margin: 0; /* Remove default margin */
+  overflow-y: auto; /* Allow scrolling for long content */
+}
+
+.navbar {
+  background: linear-gradient(135deg, #2b2b6f, #4169e1); /* Gradient background */
+  padding: 25px; /* Increased padding */
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.navbar img {
+  height: 60px; /* Slightly larger logo */
+  margin-right: 15px;
+}
+
+.navbar h1 {
+  font-size: 1.8rem; /* Larger font size for better emphasis */
+  margin: 0;
+  letter-spacing: 1.5px; /* Add spacing for a cleaner look */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  width: 90%;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  margin: auto; /* Ensure the container is centered vertically */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border for better definition */
+  animation: fadeIn 0.5s ease; /* Smooth fade-in animation */
+}
+
+.container:hover {
+  transform: translateY(-8px); /* Slightly more pronounced hover effect */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25); /* Enhanced hover shadow */
+}
+
+h1 {
+  text-align: center;
+  color: #ffd700; /* Gold */
+  font-size: 2rem; /* Larger font for better emphasis */
+  letter-spacing: 1px; /* Add spacing for a cleaner look */
+  margin: 0;
+  margin-bottom: 20px; /* Add spacing below the title */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px; /* Added spacing below input section */
+  justify-content: center; /* Center the input section */
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease; /* Smooth focus effect */
+  background: #f9f9f9; /* Light background for input fields */
+}
+
+input[type="text"]:focus {
+  border-color: #ffd700; /* Gold border on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Glow effect on focus */
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4169e1; /* Royal blue button background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  margin: 0 auto; /* Center buttons horizontally */
+  display: block; /* Ensure buttons are treated as block elements */
+  font-weight: bold; /* Make buttons more prominent */
+}
+
+button:hover {
+  background-color: #2b2b6f; /* Dark blue on hover */
+  transform: scale(1.1); /* Slightly larger hover effect */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px; /* Slightly increased spacing for better layout */
+  width: 100%; /* Ensure the list takes full width of the container */
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #e0e0e0, #f5f5f5); /* Gradient for list items */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for list items */
+  position: relative; /* Enable positioning for child elements */
+}
+
+li.completed {
+  text-decoration: line-through;
+  background: #fffacd; /* Light gold for completed items */
+}
+
+li:hover {
+  transform: translateX(8px); /* More noticeable hover movement */
+  background: linear-gradient(135deg, #e6e6fa, #dcdcdc); /* Softer hover gradient */
+}
+
+.timer-display {
+  position: absolute;
+  right: 10px; /* Align timer display to the right */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85em;
+  color: #555;
+}
+
+.actions {
+  display: flex;
+  justify-content: center; /* Center action buttons */
+  gap: 10px; /* Add spacing between action buttons */
+}
+
+.actions button {
+  margin-left: 5px;
+  background: #ffd700; /* Gold action button background */
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Add shadow for action buttons */
+}
+
+.actions button:hover {
+  background: #daa520; /* Darker gold on hover */
+  transform: scale(1.15); /* Slightly larger hover effect */
+}
+
+#remainingTasks {
+  background: linear-gradient(135deg, #f8fafc 80%, #e6e6fa 100%);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(65, 105, 225, 0.08);
+  padding: 18px 15px 10px 15px;
+  margin-top: 28px;
+  margin-bottom: 18px;
+  width: 100%;
+  max-width: 420px;
+  transition: box-shadow 0.3s;
+}
+
+#remainingTasks:hover {
+  box-shadow: 0 4px 18px rgba(65, 105, 225, 0.16);
+}
+
+#remainingTasks h2 {
+  color: #2b2b6f;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(65, 105, 225, 0.08);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
